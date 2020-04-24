@@ -34,10 +34,11 @@
   `brew install git`
   
 - Windowsの場合は，[Git for Windows][Git4Win]をインストールします．
-  - インストールし終えたあとに，Pathに以下を追加します (Windowsボタンを右クリック⇒システム⇒関連設定/システム情報⇒詳細設定⇒環境変数⇒システム環境変数のPathの行を選択して⇒編集)
-    - c:\Program Files\Git\cmd
-    - c:\Program Files\Git\mingw64\bin
-    - c:\Program Files\Git\usr\bin
+  - インストールし終えたら，WindowsメニューからGitを探し，それを右クリックして「ファイルの場所を開く」，ファイルがショートカットなので，ショートカットからさらに「ファイルの場所を開く」で，エクスプローラに現れる「パス」をコピーしておきます．（`C:\\～\Git`）
+  - コピーしたパスを環境変数Pathにを追加します (Windowsボタンを右クリック⇒システム⇒関連設定/システム情報⇒詳細設定⇒環境変数⇒システム環境変数のPathの行を選択して⇒編集)
+    - （コピーしたパス）\cmd
+    - （コピーしたパス）\mingw64\bin
+    - （コピーしたパス）\usr\bin
 
 Gitとは何か，Gitで出てくる用語，操作のいろいろについては，[Reference/Git]　を読んでください．
 

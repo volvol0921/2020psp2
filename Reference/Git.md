@@ -208,18 +208,25 @@ RにはA以外のBのバックアップも入っているかもしれません�
 
 ```
 git remote add upstream https://URL/G
+git fetch upstream
 ```
 
-すでにRにはoriginという名前がついています．なので，
+です．
+`git fetch upstream`はupstreamの名をつけたリポジトリの一次ダウンロードです．
 
-```
-git pull origin
-git remote add upstream https://URL/G
-git pull upstream
-git push origin
-```
+Visual Studio Codeからターミナルを立ち上げ，上述の2つのコマンドを打ってください．
+そうすると，ソース管理の画面で，
+「指定元からプル」で upstream，ブランチはmasterを指定できます．
+このプルにより，
+手元のPCのフォルダは私のGithubと同じになります．（自分のGithubは未だ古い）
+次に「プッシュ先」から origin，ブランチはmasterを指定し，手元のフォルダを自分のGithubにアップロードします．これで自分のGitHubが追いつきました．
 
-ですね．
+
+
+
+
+
+
 
 今回のプログラミング演習２では，まず私の神レポジトリをフォークして自分のレポジトリをGithubに作ると思います．
 私も課題をギリギリで作っているので，4月8日まではフォークしないでください．4月8日にフォークしてください．

@@ -5,13 +5,9 @@
 
 int count;
 
-extern double ave_online(double val,double ave){
-    return((double)(count - 1) / count) * ave + val / count;
-}
-extern double var_online(double val, double ave, double square_ave){
-    double result = ((double)(count - 1)) / count * ave + val / count;
-    return ((double)(count - 1)) / count * square_ave + val * val / count - (result * result);
-}
+extern double ave_online(double val,double ave);
+
+extern double var_online(double val, double ave, double square_ave);
 
 int main(void)
 {
@@ -63,3 +59,11 @@ int main(void)
 
 }
 
+double ave_online(double val,double ave){
+    return((double)(count - 1) / count) * ave + val / count;
+}
+
+double var_online(double val, double ave, double square_ave){
+    double result = ((double)(count - 1)) / count * ave + val / count;
+    return ((double)(count - 1)) / count * square_ave + val * val / count - (result * result);
+}

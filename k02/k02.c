@@ -3,6 +3,11 @@
 #include <string.h>
 #include <math.h>
 
+#define MU_A (170.8)
+#define SIGMA_A (5.43)
+#define MU_B (169.7)
+#define SIGMA_B (5.5)
+
 extern double p_stdnorm(double z);
 
 int main(void)
@@ -27,11 +32,8 @@ int main(void)
     while(fgets(buf,sizeof(buf),fp) != NULL){
         sscanf(buf,"%lf",&val);
 
-
-    
-
-
-
+        L1 *= p_stdnorm ((val - MU_A) / SIGMA_A);
+        L2 *= p_stdnorm ((val - MU_B) / SIGMA_B);
     }
 
     if(fclose(fp) == EOF){
@@ -39,8 +41,8 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
-    printf("L_A: %f\n",max_val);
-    printf("L_B: %f\n",min_val);
+    printf("L_A: %f\n",L1);
+    printf("L_B: %f\n",L2);
 
     return 0;
 

@@ -4,14 +4,38 @@ aa83988848 薗田光太郎
 
 ## 課題
 
-[sample/heights.csv]は標本全体のデータをまとめたものである．ファイル名をコマンドラインから読み込み，構造体配列に格納せよ．
-今回の標本14人では，男性8人，女性6人であるが，同年代の工学部学生全体でも男性のほうが多いのだろうか．男性の割合<img src="/k04/tex/89f2e0d2d24bcf44db73aab8fc03252c.svg?invert_in_darkmode&sanitize=true" align=middle width=7.87295519999999pt height=14.15524440000002pt/>の推定範囲を求めよ．
+[../sample/heights.csv]は標本全体（男性と女性合わせた14人）のデータをまとめたものである．
+一方，[../sample/IDs.csv]は標本14人の学籍番号（身長データと同じ順番）である．
+学籍番号を尋ねて，その学籍番号のデータがリストにあれば，学籍番号，身長，性別のデータを表示し，リストになければ，「No data」と表示せよ．
 
-[母比率の信頼区間][1]
-
-[1]:../Reference/PopulationRatio.md
+この二つのファイルを読み取り，学籍番号，身長，性別の3つをメンバーとする構造体の配列で管理するとよい．
 
 ## ソースコードの説明
+
+
+## 入出力結果
+
+例えば，ID 45313125のデータを調べたいとき，
+
+```
+Input the filename of sample height : ../sample/heights.csv
+Input the filename of sample ID : ../sample/IDs.csv
+Which ID's data do you want? : 45313125
+---
+ID : 45313125
+gender : Female
+height : 152.4
+```
+
+例えば，ID 45313124のデータを調べたいとき，
+
+```
+Input the filename of sample height : ../sample/heights.csv
+Input the filename of sample ID : ../sample/IDs.csv
+Which ID's data do you want? : 45313124
+---
+No data
+```
 
 ## 修正履歴
 

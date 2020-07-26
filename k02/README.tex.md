@@ -44,3 +44,5 @@ Likelihood for B：
 
 ## 修正履歴
 
+[comment #20200720 moto]
+- OKです．

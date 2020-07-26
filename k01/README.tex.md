@@ -93,3 +93,7 @@ population variance (estimated)：
 - プロトタイプ宣言にはexternつけますが，関数本体にはつけません．
   - main関数の前にはプロトタイプ宣言 externをつけた関数本体の1行目だけ．
   - main関数の後ろにexternをつけない関数本体
+
+[comment #20200720 moto]
+- プログラムの流れはOKですが、分散の答えが間違っています。
+- 計算を見直してみてください。

@@ -60,10 +60,14 @@ int main(void)
 }
 
 double ave_online(double val,double ave){
-    return((double)(count - 1) / count) * ave + val / count;
+    ave = (count - 1) * ave / count + val / count;
+    return ave;
 }
 
 double var_online(double val, double ave, double square_ave){
-    double result = ((double)(count - 1)) / count * ave + val / count;
-    return ((double)(count - 1)) / count * square_ave + val * val / count - (result * result);
+    double var;
+    square_ave = (count - 1) * square_ave / count + pow(val,2) / count;
+    var = square_ave - pow(ave,2);
+
+    return var;
 }

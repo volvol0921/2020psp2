@@ -46,3 +46,6 @@ Likelihood for B：
 
 [comment #20200720 moto]
 - OKです．
+
+[comment #20200731 sonoda]
+- 上の入出力結果の項に，実際の実行結果をコピペしてください．

@@ -99,3 +99,8 @@ Variance: 28.984813
 [comment #20200720 moto]
 - プログラムの流れはOKですが、分散の答えが間違っています。
 - 計算を見直してみてください。
+
+[comment #20200731 sonoda]
+- var_online関数は，新しいvalと更新されたaverageと「更新前の」square_aveを引数にとっていて，関数のなかでsquare_aveを更新していますね．で，main関数のほうでは，var_onlineを呼び出したあとに，square_aveの更新をしているようです．
+  いっそ，var_onlineの呼び出し前にsquare_aveの更新をしてしまい，var_onlineでは，「更新後の」square_aveを引数にして中で計算に使えばいいのでは，と思います．
+- 細かいことなので，課題1はOKとします．余裕があれば少し考えてみてください．
